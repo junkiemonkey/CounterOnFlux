@@ -3,6 +3,7 @@ import {counter} from './stores';
 import {countUp} from './AC/counterAC';
 
 export default class Counter extends Component{
+
   state = {
     count: counter.getCount()
   };
@@ -28,7 +29,7 @@ export default class Counter extends Component{
     countUp(this.state.count);
   };
 
-  handleChange(){
+  handleChange = () => {
     this.setState({
       count: counter.getCount()
     })

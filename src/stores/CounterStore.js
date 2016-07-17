@@ -10,6 +10,7 @@ export default class CounterStore extends EventEmitter {
       switch(type) {
         case 'COUNT_UP':
           this._countUp();
+          this.emitCount();
       }
     })
   }
@@ -19,7 +20,7 @@ export default class CounterStore extends EventEmitter {
   }
   
   _countUp(count){
-    console.log(this._count);
+    // console.log(this._count);
     return this._count += 1
   }
 
